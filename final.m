@@ -17,7 +17,7 @@ for iii = 1:u           % ebn0 loop
     %nloop = 100;       % # of simulation loop
         
     SNR = 10^(EbNo(iii)/10);
-    sgma = 1/sqrt(2*SNR);
+    sgma = 1/sqrt(SNR);
     
     
         % Generate prbs data and encode the data using Hamming code
@@ -48,5 +48,5 @@ title('Hamming coded Pulses')
 subplot(3,1,3)
 stairs(noised_data)
 xlim([0 100])
-title('Noise that is being added')
+title('Noise Added thorugh AWGN')
 
