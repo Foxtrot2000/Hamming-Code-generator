@@ -29,7 +29,7 @@ for iii = 1:u           % ebn0 loop
         rdata_bpsk = bpsk_mod_demod(data, sgma);
         rdata_bpsk_hamm = bpsk_mod_demod(data_hamm, sgma);
         
-     error= biterr(rdata_bpsk, data);
+     error= biterr(rdata_bpsk_hamm, data_hamm);
      disp(error);
         
 end    
